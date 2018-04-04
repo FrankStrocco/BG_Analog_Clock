@@ -1,46 +1,93 @@
 
 
 .main {
-  height: 25em;
+  height: 600px;
   border: red 2px solid;
 
 }
 
 .container {
-  width: 600px;
+  width: 100%;
+  height: calc(width*1);
   outline: 2px bold;
   position: relative;
   border: 3px solid green;
+  display: flex;
+  padding-bottom: 100%
+
 }
 
 .face {
-
+  margin: 0;
+  padding: 0;
   position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/jpegs/Clock_Face.jpg') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   left: 0;
   top: 0;
-  border: 2px solid blue;
-  width: 300px;
+  border: 2px dotted blue;
   z-index: 1;
 }
+
+.hr_container, .min_container, .sec_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
+
+
 .hr {
-  border: 3px red solid;
+  border: 2px solid #444;
+  background: #000;
+  height: 25%;
+  left: 48.50%;
   position: absolute;
-  left: 150px;
-  top: 150px;
-  z-index: 2;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+  width: 2.4%;
 }
+
+
 .min {
-  border: 2px blue solid;
+  border: 2px solid #444;
+  background: #000;
+  height: 36%;
+  left: 48.9%;
   position: absolute;
-  left: 150px;
-  top: 150px;
-  z-index: 3;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+  width: 1.6%;
+
 }
+
 .sec {
-  border: 1px yellow solid;
+  border: 2px solid #444;
+  background: #000;
+  height: 42%;
+  left: 48.9%;
+  transform: rotateZ(0deg);
   position: absolute;
-  left: 150px;
-  top: 150px;
-  z-index: 4;
+  bottom: 40%;
+  transform-origin: 50% 77%;
+  width: 0.6%;
+  transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
+}
+
+.face:after {
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.25%;
+  height: 4.25%;
+  z-index: 10;
 }
