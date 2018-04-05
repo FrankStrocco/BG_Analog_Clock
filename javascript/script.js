@@ -3,30 +3,36 @@ const MINUTEHAND = document.querySelector(".min");
 const SECONDHAND = document.querySelector(".sec");
 const SIZE = document.querySelector(".container");
 
-function getDaHeight(){
-  let daHeight = document.querySelector(".container").offsetHeight;
-  return daHeight;
-}
+// var w = window,
+//     d = document,
+//     e = d.documentElement,
+//     g = d.getElementsByTagName('body')[0],
+//     x = w.innerWidth || e.clientWidth || g.clientWidth,
+//     y = w.innerHeight || e.clientHeight || g.clientHeight;
+// console.log("w.innerWidth: ", w.innerWidth);
+// // console.log("e.clientWidth: ", e.clientWidth);
+// // console.log("g.clientWidth: ", g.clientWidth);
+//
+//
+// console.log(`x: ${x} and y: ${y}`);
+//
+//
+// if (x > y) {
+//   document.querySelector(".face").style.width = 60 + "%";
+//   document.querySelector(".face").style.height = 60 + "%";
+//
+//   let w = window,
+//       d = document,
+//       e = d.documentElement,
+//       g = d.getElementsByTagName('body')[0],
+//       x = w.innerWidth || e.clientWidth || g.clientWidth,
+//       y = w.innerHeight || e.clientHeight || g.clientHeight;
+//
+//   console.log("w.innerWidth: ", w.innerWidth);
+// }
 
-function getDaWidth(){
-  let daWidth = document.querySelector(".container").offsetWidth;
-  return daWidth;
-}
 
-var daWidth = getDaWidth();
 
-var daHeight = getDaHeight();
-
-console.log("daHeight: ", daHeight);
-console.log("daWidth", daWidth);
-
-console.log("SIZE: ", SIZE);
-var computedHeight = getComputedStyle(document.querySelector(".container")).height;
-
-console.log("computedHeight: ", computedHeight);
-
-var containerHeight = SIZE.style.offsetHeight;
-console.log("containerHeight: ", containerHeight);
 
 var date = new Date();
 console.log(date);
